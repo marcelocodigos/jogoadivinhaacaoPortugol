@@ -1,5 +1,8 @@
 programa
 {
+	//biclioteca que gera numeros aleatorios
+	inclua biblioteca Util-->geraNumero
+
 	
 	//inicio funççao Menu principal 
      funcao menuPrincipal(){
@@ -36,17 +39,52 @@ programa
 			//definindo o nivel 1
 			qtdChances=5
 			qtdNumeros=10
+			
+			//chamando a funcao jogo principal
+			jogoPrincipal(qtdChances, qtdNumeros)
 		}senao se(opcaoMenu=="2"){
 			qtdChances=7
 			qtdNumeros=50
+			
+			//chamando a funcao jogo principal
+			jogoPrincipal(qtdChances, qtdNumeros)
 		}senao se(opcaoMenu=="3"){
 			qtdChances=8
 			qtdNumeros=100
+			
+			//chamando a funcao jogo principal
+			jogoPrincipal(qtdChances, qtdNumeros)
 		}senao{
 			
 		}
 	}//fim função niveis do jogo 
-	
+
+	//função jogo Principal
+	funcao jogoPrincipal(inteiro qtdChances,inteiro qtdNumeros){
+		
+		inteiro numeroGerado=0,limiteDeChances=1,palpiteUsuario=0
+		
+		//biblioteca que gera o numero
+		numeroGerado=geraNumero.sorteia(1,qtdChances)
+
+		//enquanto 
+		enquanto(numeroGerado!=palpiteUsuario e limiteDeChances<=qtdChances){
+			escreva("\nChance. ",limiteDeChances," de ",qtdChances)
+			escreva("\nEntre com um numero entre 1 e ",qtdNumeros," ..:")
+			leia(palpiteUsuario)
+			//Dicas se é maior
+			se(palpiteUsuario>numeroGerado){
+				escreva("\n\n o numero é menor que ",palpiteUsuario)
+			}senao se(palpiteUsuario<numeroGerado){
+				escreva("\n\n o numero é maior que ",palpiteUsuario)
+			}senao{
+				escreva("\n\n Parabéns !! Você acertou !!")
+			}
+			limiteDeChances++
+		}
+		//quando eu acerto ou quando eu erro !!
+		
+	}//fimfuncao jogo Principal
 	funcao inicio()
 	{
 		//jogo de avinhação com portugol Studio
@@ -61,10 +99,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1234; 
- * @DOBRAMENTO-CODIGO = [4];
+ * @POSICAO-CURSOR = 2412; 
+ * @DOBRAMENTO-CODIGO = [7, 33, 87];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {opcaoMenu, 6, 13, 9}-{opcaoMenu, 31, 25, 9}-{qtdChances, 32, 10, 10}-{qtdNumeros, 32, 23, 10};
+ * @SIMBOLOS-INSPECIONADOS = {qtdChances, 35, 10, 10}-{qtdNumeros, 35, 23, 10}-{numeroGerado, 65, 10, 12}-{palpiteUsuario, 65, 43, 14};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
