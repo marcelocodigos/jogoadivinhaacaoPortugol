@@ -3,7 +3,21 @@ programa
 	//biclioteca que gera numeros aleatorios
 	inclua biblioteca Util-->geraNumero
 
-	
+	//funcao novoJogo
+     funcao novoJogo(){
+     	cadeia novoJogoOpcao=""
+     	escreva("Deseja jogar novamente ? \n")
+     	escreva("\nS Para Sim ou Qualquer tecla para sair.:")
+     	leia(novoJogoOpcao)
+     	se(novoJogoOpcao=="S" ou novoJogoOpcao=="s"){
+     		limpa()
+     		menuPrincipal()
+     	}senao{
+     		limpa()
+     	}
+     	
+     }//fimfuncao novoJogo
+     
 	//inicio funççao Menu principal 
      funcao menuPrincipal(){
      	cadeia opcaoMenu="0"
@@ -79,7 +93,9 @@ programa
 			}senao se(palpiteUsuario<numeroGerado){
 				escreva("\n\n o numero é maior que ",palpiteUsuario)
 			}senao{
-				escreva("\n\n Parabéns !! Você acertou !!")
+				limpa()
+				escreva("\n\n Parabéns !! Você acertou !!\n")
+				novoJogo()
 			}
 			limiteDeChances++
 		}
@@ -100,10 +116,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1840; 
- * @DOBRAMENTO-CODIGO = [7, 88];
+ * @POSICAO-CURSOR = 133; 
+ * @DOBRAMENTO-CODIGO = [6, 21, 47, 104];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {qtdChances, 35, 10, 10}-{qtdNumeros, 35, 23, 10}-{numeroGerado, 65, 10, 12}-{palpiteUsuario, 65, 43, 14};
+ * @SIMBOLOS-INSPECIONADOS = {qtdChances, 49, 10, 10}-{qtdNumeros, 49, 23, 10}-{numeroGerado, 79, 10, 12}-{palpiteUsuario, 79, 43, 14};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
