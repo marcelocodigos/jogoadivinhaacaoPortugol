@@ -1,6 +1,6 @@
 programa
 {
-	//biclioteca que gera numeros aleatorios
+	//biclioteca que gera numeros aleatorios
 	inclua biblioteca Util-->geraNumero
 
 	
@@ -65,7 +65,8 @@ programa
 		inteiro numeroGerado=0,limiteDeChances=1,palpiteUsuario=0
 		
 		//biblioteca que gera o numero
-		numeroGerado=geraNumero.sorteia(1,qtdChances)
+		//troquei de quantidade chances para quantidade numeros
+		numeroGerado=geraNumero.sorteia(1,qtdNumeros)
 
 		//enquanto 
 		enquanto(numeroGerado!=palpiteUsuario e limiteDeChances<=qtdChances){
@@ -99,8 +100,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2412; 
- * @DOBRAMENTO-CODIGO = [7, 33, 87];
+ * @POSICAO-CURSOR = 1840; 
+ * @DOBRAMENTO-CODIGO = [7, 88];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {qtdChances, 35, 10, 10}-{qtdNumeros, 35, 23, 10}-{numeroGerado, 65, 10, 12}-{palpiteUsuario, 65, 43, 14};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
