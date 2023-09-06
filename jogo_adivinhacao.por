@@ -97,9 +97,16 @@ programa
 				escreva("\n\n Parabéns !! Você acertou !!\n")
 				novoJogo()
 			}
+			
 			limiteDeChances++
+		}//fim lopp enquanto
+		//daqui pra cá o usuário errou todas as chances
+		se(limiteDeChances>=qtdChances){
+			limpa()
+			escreva("\nVOCÊ PERDEU ! :( ")
+			escreva("\nO Número gerado era o, ",numeroGerado,"\n")
+			novoJogo()
 		}
-		//quando eu acerto ou quando eu erro !!
 		
 	}//fimfuncao jogo Principal
 	funcao inicio()
@@ -116,10 +123,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 133; 
- * @DOBRAMENTO-CODIGO = [6, 21, 47, 104];
+ * @POSICAO-CURSOR = 2785; 
+ * @DOBRAMENTO-CODIGO = [6, 21, 111];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {qtdChances, 49, 10, 10}-{qtdNumeros, 49, 23, 10}-{numeroGerado, 79, 10, 12}-{palpiteUsuario, 79, 43, 14};
+ * @SIMBOLOS-INSPECIONADOS = {qtdChances, 49, 10, 10}-{qtdNumeros, 49, 23, 10}-{numeroGerado, 79, 10, 12}-{limiteDeChances, 79, 25, 15}-{palpiteUsuario, 79, 43, 14};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
